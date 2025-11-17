@@ -1,3 +1,394 @@
-body {
-  background: #fafafa;
+/* styles.css - Napoli Artesanal - Mobile First */
+/* DIA 5 — Layout Base + Mobile First */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* Fonte global */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Espaçamento padrão nas seções */
+section {
+  padding: 20px;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+  background-color: #8B0000; /* Vermelho escuro - cor primária */
+  padding: 15px 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Menu superior empilhado no mobile */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 15px;
+  border-radius: 4px;
+  text-align: center;
+  min-height: 44px; /* Área de toque mínima */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== HERO SECTIONS ===== */
+.hero {
+  background-color: #FFF8E1; /* Amarelo claro - cor secundária */
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.hero-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #8B0000;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact-hero,
+.products-hero {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-hero h2,
+.products-hero h2 {
+  color: #8B0000;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.contact-hero p,
+.products-hero p {
+  color: #555;
+}
+
+/* ===== BUTTONS ===== */
+.cta-button, 
+.order-btn, 
+.submit-btn {
+  display: inline-block;
+  background-color: #8B0000;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-weight: bold;
+  min-height: 44px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cta-button:hover, 
+.order-btn:hover, 
+.submit-btn:hover {
+  background-color: #A52A2A;
+}
+
+/* ===== FAVORITES SECTION ===== */
+.favorites-section h2,
+.products-section h2 {
+  color: #8B0000;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.favorite-list,
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.favorite-item,
+.product-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.favorite-item h3,
+.product-item h3 {
+  color: #8B0000;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.favorite-item p,
+.product-item p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* ===== PRODUCTS PAGE SPECIFIC ===== */
+.product-image {
+  height: 150px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-size: 2.5rem;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #8B0000;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.dietary-info {
+  text-align: center;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.dietary-info h3 {
+  color: #8B0000;
+  margin-bottom: 10px;
+}
+
+.dietary-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: #FFF8E1;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+/* ===== ABOUT PAGE ===== */
+.about-section {
+  margin-bottom: 20px;
+}
+
+.about-section h2 {
+  color: #8B0000;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5rem;
+}
+
+.about-section p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.about-section ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.about-section li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.differentiators-section ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.differentiators-section li {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.differentiators-section li:last-child {
+  border-bottom: none;
+}
+
+.differentiators-section h3 {
+  color: #8B0000;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info, 
+.contact-form {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.contact-info h3, 
+.contact-form h3 {
+  color: #8B0000;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.info-item {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.info-item span[aria-hidden="true"] {
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.info-item h4 {
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.info-item p {
+  color: #555;
+}
+
+.hours-list {
+  list-style: none;
+  width: 100%;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #eee;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+}
+
+.map-container {
+  margin-top: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* ===== UTILITY CLASSES ===== */
+strong {
+  color: #8B0000;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 374px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content h2,
+  .contact-hero h2,
+  .products-hero h2 {
+    font-size: 1.4rem;
+  }
+  
+  section {
+    padding: 15px;
+  }
+}
+
